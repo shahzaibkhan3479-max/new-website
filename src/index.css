@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #C5A059; /* Muted Gold */
+  --color-brand-bg: #0A0A0A;    /* Noir */
+  --color-brand-surface: #151515; /* Dark Grey */
+  --color-brand-text: #F5F2ED;   /* Bone */
+  --color-brand-muted: #888888;
+  --color-brand-border: rgba(197, 160, 89, 0.2);
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-text bg-brand-bg selection:bg-brand-primary/20;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+
+  .italic-serif {
+    @apply font-serif italic text-brand-primary;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 backdrop-blur-md bg-brand-bg/95 border-b border-brand-border;
+}
+
+.service-card {
+  @apply p-10 bg-brand-surface/30 border border-brand-border transition-all duration-500 hover:bg-brand-primary/5;
+}
+
+.btn-primary {
+  @apply px-8 py-3 bg-brand-primary text-brand-bg font-bold uppercase tracking-widest text-[10px] transition-all hover:opacity-90 hover:scale-[1.02] active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-8 py-3 border border-brand-primary text-brand-primary font-bold uppercase tracking-widest text-[10px] transition-all hover:bg-brand-primary/10 hover:scale-[1.02] active:scale-95;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
