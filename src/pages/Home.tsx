@@ -153,6 +153,78 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <section className="py-24 border-t border-brand-border bg-brand-bg">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 text-left">
+            <div className="max-w-2xl">
+              <span className="text-brand-primary tracking-[0.4em] uppercase text-[10px] font-bold mb-4 block">Testimonials</span>
+              <h2 className="text-5xl font-light italic-serif tracking-tight">Verified <span className="text-brand-text not-italic">Success Stories</span></h2>
+            </div>
+            <a 
+              href="https://maps.google.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[10px] tracking-widest uppercase text-brand-primary font-bold border-b border-brand-primary/30 pb-2 hover:border-brand-primary transition-all mb-2"
+            >
+              Read all 30+ reviews on Google Maps
+            </a>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-brand-border border border-brand-border overflow-hidden">
+            {[
+              {
+                name: "Sarah Jenkins",
+                role: "GSD Owner",
+                text: "The board and train program completely changed our lives. Our reactive dog is now calm and focused on walks.",
+                img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"
+              },
+              {
+                name: "Michael Ross",
+                role: "Golden Retriever Owner",
+                text: "Amazing experience. The daily cinematic updates kept us at ease while Max was learning so much.",
+                img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
+              },
+              {
+                name: "Emily White",
+                role: "Doodle Owner",
+                text: "Professional and force-free. I can't recommend Paws & Praise enough for their intermediate coaching sessions.",
+                img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+              },
+              {
+                name: "David Kim",
+                role: "Beagle Owner",
+                text: "Urban adventures were just what my city dog needed. He's much more confident on busy streets now.",
+                img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+              }
+            ].map((review, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-brand-bg p-8 hover:bg-brand-primary/5 transition-colors group"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 overflow-hidden border border-brand-border group-hover:border-brand-primary/50 transition-colors">
+                    <img src={review.img} alt={review.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium tracking-tight whitespace-nowrap">{review.name}</h4>
+                    <p className="text-[10px] text-brand-primary uppercase tracking-widest">{review.role}</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={10} className="fill-brand-primary text-brand-primary" />)}
+                </div>
+                <p className="text-brand-muted text-sm font-light leading-relaxed italic">"{review.text}"</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
