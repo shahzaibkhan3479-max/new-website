@@ -35,7 +35,7 @@ export default function BoardAndTrain() {
                   { icon: <ClipboardCheck size={16}/>, label: "Follow-up support" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-[10px] tracking-widest uppercase text-brand-muted border-b border-brand-border/30 pb-3">
-                    <span className="text-brand-primary">{item.icon}</span>
+                    <span className="text-brand-accent">{item.icon}</span>
                     {item.label}
                   </div>
                 ))}
@@ -75,7 +75,7 @@ export default function BoardAndTrain() {
                 <div className="space-y-4 mb-12">
                   {p.features.map((f, j) => (
                     <div key={j} className="flex items-center gap-3 text-[10px] tracking-widest uppercase text-brand-muted/80">
-                      <div className="w-1 h-1 rounded-full bg-brand-primary" />
+                      <div className="w-1 h-1 rounded-full bg-brand-accent" />
                       {f}
                     </div>
                   ))}

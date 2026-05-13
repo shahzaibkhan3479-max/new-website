@@ -17,7 +17,7 @@ export default function Contact() {
 
             <div className="space-y-12">
               <div className="flex gap-6 items-start">
-                <div className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-primary flex-shrink-0">
+                <div className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-accent flex-shrink-0">
                   <Mail size={18} />
                 </div>
                 <div>
@@ -26,7 +26,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="flex gap-6 items-start">
-                <div className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-primary flex-shrink-0">
+                <div className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-accent flex-shrink-0">
                   <Phone size={18} />
                 </div>
                 <div>
@@ -37,10 +37,10 @@ export default function Contact() {
             </div>
 
             <div className="mt-20 flex gap-6">
-               <a href="#" className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-muted hover:border-brand-primary hover:text-brand-primary transition-all">
+               <a href="#" className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-muted hover:border-brand-accent hover:text-brand-accent transition-all">
                   <Instagram size={16} />
                </a>
-               <a href="#" className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-muted hover:border-brand-primary hover:text-brand-primary transition-all">
+               <a href="#" className="w-10 h-10 border border-brand-border flex items-center justify-center text-brand-muted hover:border-brand-accent hover:text-brand-accent transition-all">
                   <Facebook size={16} />
                </a>
             </div>
@@ -55,7 +55,7 @@ export default function Contact() {
                     animate={{ opacity: 1 }}
                     className="text-center py-20"
                   >
-                    <div className="w-16 h-16 border border-brand-primary text-brand-primary flex items-center justify-center mx-auto mb-8">
+                    <div className="w-16 h-16 border border-brand-accent text-brand-accent flex items-center justify-center mx-auto mb-8">
                       <Send size={24} />
                     </div>
                     <h2 className="text-3xl font-light mb-4 italic-serif">Submission <span className="not-italic">Received</span></h2>

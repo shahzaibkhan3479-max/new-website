@@ -34,7 +34,7 @@ export default function DayTraining() {
             </div>
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <Mountain size={24} className="text-brand-primary" />
+                <Mountain size={24} className="text-brand-accent" />
                 <h2 className="text-3xl font-light tracking-tight italic-serif">Play Paws <span className="text-brand-text not-italic font-light">Adventures</span></h2>
               </div>
               <p className="text-brand-muted font-light text-sm mb-12 leading-relaxed max-w-md">
@@ -42,11 +42,11 @@ export default function DayTraining() {
               </p>
               <div className="flex gap-10 mb-12 border-y border-brand-border/50 py-6">
                 <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-brand-muted">
-                  <Compass size={14} className="text-brand-primary" />
+                  <Compass size={14} className="text-brand-accent" />
                   <span>2.5 Hours</span>
                 </div>
                 <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-brand-muted">
-                  <Sun size={14} className="text-brand-primary" />
+                  <Sun size={14} className="text-brand-accent" />
                   <span>Physical enrichment</span>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export default function DayTraining() {
             </div>
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <MapPin size={24} className="text-brand-primary" />
+                <MapPin size={24} className="text-brand-accent" />
                 <h2 className="text-3xl font-light tracking-tight italic-serif">Urban <span className="text-brand-text not-italic font-light">Exposure</span></h2>
               </div>
               <p className="text-brand-muted font-light text-sm mb-12 leading-relaxed max-w-md">
@@ -81,11 +81,11 @@ export default function DayTraining() {
               </p>
               <div className="flex gap-10 mb-12 border-y border-brand-border/50 py-6">
                 <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-brand-muted">
-                  <Users size={14} className="text-brand-primary" />
+                  <Users size={14} className="text-brand-accent" />
                   <span>Social proofing</span>
                 </div>
                 <div className="flex items-center gap-3 text-[10px] tracking-widest uppercase text-brand-muted">
-                  <Coffee size={14} className="text-brand-primary" />
+                  <Coffee size={14} className="text-brand-accent" />
                   <span>Neutrality work</span>
                 </div>
               </div>

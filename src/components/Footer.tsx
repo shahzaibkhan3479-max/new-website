@@ -38,7 +38,7 @@ export default function Footer() {
             <p className="text-xs text-brand-muted mb-4 font-light">Join our list for canine psychology insights.</p>
             <div className="flex gap-2">
               <input type="text" placeholder="Email Address" className="bg-brand-surface px-4 py-2 text-xs text-brand-text flex-grow border border-brand-border outline-none focus:border-brand-primary transition-colors" />
-              <button className="bg-brand-primary text-brand-bg p-2 hover:opacity-90 transition-opacity"><Mail size={16}/></button>
+              <button className="bg-brand-primary text-white p-2 hover:opacity-90 transition-opacity"><Mail size={16}/></button>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function Footer() {
           <p className="text-[10px] tracking-widest text-brand-muted uppercase">
             © {new Date().getFullYear()} Paws & Praise.
           </p>
-          <div className="flex gap-6 text-brand-muted">
+          <div className="flex gap-6 text-brand-accent">
              <a href="#" className="hover:text-brand-primary transition-colors"><Instagram size={18}/></a>
              <a href="#" className="hover:text-brand-primary transition-colors"><Facebook size={18}/></a>
           </div>

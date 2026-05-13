@@ -127,8 +127,8 @@ export default function Home() {
                 { title: "Tailored Methodology", desc: "No generic templates. We adapt to your dog's unique neurological profile." }
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 items-start">
-                  <div className="bg-brand-primary/10 p-3 border border-brand-primary/20 rounded-sm">
-                    <Shield className="w-5 h-5 text-brand-primary" />
+                  <div className="bg-brand-accent/10 p-3 border border-brand-accent/20 rounded-sm">
+                    <Shield className="w-5 h-5 text-brand-accent" />
                   </div>
                   <div>
                     <h4 className="text-xl font-medium mb-2 tracking-tight">{item.title}</h4>
@@ -217,7 +217,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={10} className="fill-brand-primary text-brand-primary" />)}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={10} className="fill-brand-accent text-brand-accent" />)}
                 </div>
                 <p className="text-brand-muted text-sm font-light leading-relaxed italic">"{review.text}"</p>
               </motion.div>

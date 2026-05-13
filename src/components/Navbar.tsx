@@ -48,7 +48,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-brand-primary" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden text-brand-accent" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

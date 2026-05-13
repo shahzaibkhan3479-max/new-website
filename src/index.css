@@ -1,46 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Georgia", serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  --color-brand-primary: #C5A059; /* Muted Gold */
-  --color-brand-bg: #0A0A0A;    /* Noir */
-  --color-brand-surface: #151515; /* Dark Grey */
-  --color-brand-text: #F5F2ED;   /* Bone */
-  --color-brand-muted: #888888;
-  --color-brand-border: rgba(197, 160, 89, 0.2);
+  --color-brand-primary: #A01A1A; /* Deep Crimson Red */
+  --color-brand-accent: #F472B6;  /* Soft Pink */
+  --color-brand-bg: #FFFFFF;     /* White */
+  --color-brand-surface: #F9FAFB; /* Light Surface */
+  --color-brand-text: #1F2937;    /* Dark Gray */
+  --color-brand-muted: #6B7280;   /* Muted Gray */
+  --color-brand-border: rgba(160, 26, 26, 0.1); /* Faint Crimson Border */
 }
 
 @layer base {
   body {
-    @apply font-sans text-brand-text bg-brand-bg selection:bg-brand-primary/20;
+    @apply font-sans text-brand-text bg-brand-bg selection:bg-brand-primary/10 antialiased;
   }
   
   h1, h2, h3, h4 {
-    @apply tracking-tight;
+    @apply tracking-tight text-brand-text font-semibold;
   }
 
   .italic-serif {
-    @apply font-serif italic text-brand-primary;
+    @apply font-serif italic text-brand-primary font-medium;
   }
 }
 
 .glass-nav {
-  @apply sticky top-0 z-50 backdrop-blur-md bg-brand-bg/95 border-b border-brand-border;
+  @apply sticky top-0 z-50 backdrop-blur-md bg-brand-bg/90 border-b border-brand-border;
 }
 
 .service-card {
-  @apply p-10 bg-brand-surface/30 border border-brand-border transition-all duration-500 hover:bg-brand-primary/5;
+  @apply p-10 bg-brand-surface border border-brand-border transition-all duration-500 hover:shadow-xl hover:shadow-brand-primary/5 hover:border-brand-primary/30;
 }
 
 .btn-primary {
-  @apply px-8 py-3 bg-brand-primary text-brand-bg font-bold uppercase tracking-widest text-[10px] transition-all hover:opacity-90 hover:scale-[1.02] active:scale-95;
+  @apply px-8 py-3 bg-brand-primary text-white font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-brand-primary/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-brand-primary/20;
 }
 
 .btn-secondary {
-  @apply px-8 py-3 border border-brand-primary text-brand-primary font-bold uppercase tracking-widest text-[10px] transition-all hover:bg-brand-primary/10 hover:scale-[1.02] active:scale-95;
+  @apply px-8 py-3 border border-brand-primary text-brand-primary font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-brand-primary/5 hover:scale-[1.02] active:scale-95;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');

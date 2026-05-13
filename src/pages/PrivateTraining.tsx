@@ -74,7 +74,7 @@ export default function PrivateTraining() {
               transition={{ delay: i * 0.1 }}
               className={`p-12 flex flex-col border-r border-b border-brand-border last:border-r-0 md:[&:nth-child(2)]:border-r-0 lg:[&:nth-child(3n)]:border-r-0 transition-colors hover:bg-brand-primary/5 ${pkg.featured ? "bg-brand-primary/5" : ""}`}
             >
-              <div className="text-brand-primary mb-8">
+              <div className="text-brand-accent mb-8">
                 {pkg.icon}
               </div>
               <h3 className="text-2xl font-light mb-4">{pkg.name}</h3>
@@ -109,15 +109,15 @@ export default function PrivateTraining() {
                 <h2 className="text-4xl font-light mb-12">The <span className="italic-serif">Methodology</span></h2>
                 <ul className="space-y-10">
                   <li className="flex gap-6">
-                    <div className="text-brand-primary mt-1"><CheckCircle2 className="w-5 h-5" /></div>
+                    <div className="text-brand-accent mt-1"><CheckCircle2 className="w-5 h-5" /></div>
                     <p className="text-brand-muted font-light leading-relaxed"><span className="text-brand-text font-medium block mb-1">Tailored Programming</span> Every session matches your dog’s unique sensory profile and personality.</p>
                   </li>
                   <li className="flex gap-6">
-                     <div className="text-brand-primary mt-1"><CheckCircle2 className="w-5 h-5" /></div>
+                     <div className="text-brand-accent mt-1"><CheckCircle2 className="w-5 h-5" /></div>
                     <p className="text-brand-muted font-light leading-relaxed"><span className="text-brand-text font-medium block mb-1">Force-Free Ethics</span> We exclusively use neurologically-sound, reward-based techniques.</p>
                   </li>
                   <li className="flex gap-6">
-                     <div className="text-brand-primary mt-1"><CheckCircle2 className="w-5 h-5" /></div>
+                     <div className="text-brand-accent mt-1"><CheckCircle2 className="w-5 h-5" /></div>
                     <p className="text-brand-muted font-light leading-relaxed"><span className="text-brand-text font-medium block mb-1">Owner Empowerment</span> In-depth education to ensure your success continues at home.</p>
                   </li>
                 </ul>
