@@ -1,31 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
   --color-brand-primary: #A01A1A; /* Deep Crimson Red */
-  --color-brand-accent: #F472B6;  /* Soft Pink */
+  --color-brand-accent: #D1106A;  /* Strengthened Pink for Visibility */
   --color-brand-bg: #FFFFFF;     /* White */
   --color-brand-surface: #F9FAFB; /* Light Surface */
-  --color-brand-text: #1F2937;    /* Dark Gray */
-  --color-brand-muted: #6B7280;   /* Muted Gray */
-  --color-brand-border: rgba(160, 26, 26, 0.1); /* Faint Crimson Border */
+  --color-brand-text: #111827;    /* Slate 900 for Maximum Contrast */
+  --color-brand-muted: #374151;   /* Slate 700 for Perfect Legibility */
+  --color-brand-border: rgba(160, 26, 26, 0.15); /* Faint Crimson Border */
 }
 
 @layer base {
   body {
-    @apply font-sans text-brand-text bg-brand-bg selection:bg-brand-primary/10 antialiased;
+    @apply font-sans text-brand-text bg-brand-bg selection:bg-brand-primary/10;
   }
   
   h1, h2, h3, h4 {
-    @apply tracking-tight text-brand-text font-semibold;
+    @apply tracking-tighter text-brand-text font-bold;
   }
 
   .italic-serif {
-    @apply font-serif italic text-brand-primary font-medium;
+    @apply font-serif italic text-brand-primary font-semibold;
   }
+
+  .text-glow {
+    text-shadow: 0 0 15px rgba(244, 114, 182, 0.3);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] drop-shadow-sm;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .paw-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23A01A1A' fill-opacity='0.03' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 5c.828 0 1.5.895 1.5 2s-.672 2-1.5 2-1.5-.895-1.5-2 .672-2 1.5-2zM8 8c.828 0 1.5.895 1.5 2s-.672 2-1.5 2-1.5-.895-1.5-2 .672-2 1.5-2zm8 0c.828 0 1.5.895 1.5 2s-.672 2-1.5 2-1.5-.895-1.5-2 .672-2 1.5-2zm-6 7c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.5-2 4.5-4 4.5s-4-2-4-4.5z'/%3E%3C/svg%3E");
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .tilt-card {
+    transition: transform 0.1s ease-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
 }
 
 .glass-nav {
@@ -37,11 +77,11 @@
 }
 
 .btn-primary {
-  @apply px-8 py-3 bg-brand-primary text-white font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-brand-primary/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-brand-primary/20;
+  @apply px-8 py-3 bg-brand-primary text-white font-bold uppercase tracking-widest text-[10px] transition-all hover:bg-brand-primary/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-brand-primary/20;
 }
 
 .btn-secondary {
-  @apply px-8 py-3 border border-brand-primary text-brand-primary font-bold uppercase tracking-[0.2em] text-[10px] transition-all hover:bg-brand-primary/5 hover:scale-[1.02] active:scale-95;
+  @apply px-8 py-3 border border-brand-primary text-brand-primary font-bold uppercase tracking-widest text-[10px] transition-all hover:bg-brand-primary/5 hover:scale-[1.02] active:scale-95;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
